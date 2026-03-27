@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickEats Food Delivery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fff8f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ff5a36;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: #222;
+            padding: 12px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ffb347;
+        }
+
+        .welcome {
+            background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .welcome h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+            background-color: rgba(0,0,0,0.5);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        .welcome p {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 18px;
+            background-color: rgba(0,0,0,0.5);
+            padding: 12px 18px;
+            border-radius: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #ff5a36;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #e14a28;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: #ff5a36;
+        }
+
+        .categories-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .category-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding-bottom: 15px;
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .category-card h3 {
+            margin: 15px 0 10px;
+            color: #222;
+        }
+
+        .category-card p {
+            padding: 0 15px;
+            font-size: 15px;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .menu-card {
+            background-color: white;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .menu-card h3 {
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .menu-card p {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 20px;
+            color: #ff5a36;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .contact {
+            background-color: #ffe8dc;
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-top: 5px solid #ff5a36;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>QuickEats Food Delivery</h1>
+        <p>Hot, fresh, and delicious meals delivered to you in minutes!</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#order">Order Online</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section class="welcome" id="home">
+        <h2>Delicious Food Delivered to Your Doorstep</h2>
+        <p>
+            Welcome to QuickEats Food Delivery, your one-stop destination for tasty meals, quick delivery,
+            and a wide range of cuisines. From pizza to biryani, we bring your favorite food straight to your home.
+        </p>
+        <a href="#menu" class="btn">Order Now</a>
+    </section>
+
+    <!-- Food Categories Section -->
+    <section id="categories">
+        <h2>Food Categories</h2>
+        <div class="categories-container">
+            <div class="category-card">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591" alt="Pizza">
+                <h3>Pizza</h3>
+                <p>Cheesy and flavorful pizzas with a variety of toppings for every taste.</p>
+            </div>
+
+            <div class="category-card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" alt="Burgers">
+                <h3>Burgers</h3>
+                <p>Juicy burgers packed with fresh ingredients and delicious sauces.</p>
+            </div>
+
+            <div class="category-card">
+                <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0" alt="Biryani">
+                <h3>Biryani</h3>
+                <p>Authentic biryani cooked with aromatic spices and rich flavors.</p>
+            </div>
+
+            <div class="category-card">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b" alt="Desserts">
+                <h3>Desserts</h3>
+                <p>Sweet treats and desserts to complete your meal perfectly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Menu Section -->
+    <section id="menu">
+        <h2>Featured Menu / Popular Dishes</h2>
+        <div class="menu-container">
+            <div class="menu-card">
+                <h3>Margherita Pizza</h3>
+                <p>A classic pizza topped with mozzarella cheese, tomato sauce, and fresh basil.</p>
+                <div class="price">₹299</div>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="menu-card">
+                <h3>Chicken Biryani</h3>
+                <p>Fragrant basmati rice cooked with tender chicken pieces and traditional spices.</p>
+                <div class="price">₹249</div>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+            <div class="menu-card">
+                <h3>Chocolate Brownie</h3>
+                <p>Rich and gooey chocolate brownie served as the perfect dessert delight.</p>
+                <div class="price">₹149</div>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order">
+        <h2>Order Online</h2>
+        <p>Order your favorite meals easily through our website and enjoy fast delivery at your convenience.</p>
+        <a href="#contact" class="btn">Place Your Order</a>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Information</h2>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> support@quickeats.com</p>
+        <p><strong>Location:</strong> Serving Vellore, Katpadi, and nearby areas</p>
+        <p><strong>Social Media:</strong> Facebook | Instagram | Twitter</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 QuickEats Food Delivery. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
